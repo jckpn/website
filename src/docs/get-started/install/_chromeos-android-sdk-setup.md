@@ -17,12 +17,21 @@ Drag and drop the downloaded zip into your Linux Files folder through the
 Chrome OS Files app. This moves it to the home directory, notated as
 $TOOLS_PATH going forward (`~/`).
 
-Unzip the tools and then add it to your path.
+Make a folder with the name `cmdline-tools` and unzip the tools into this folder. (This is necessary for the command line tools to work.)
 
 ```terminal
+$ mkdir cmdline-tools
+$ cd cmdline-tools
 $ unzip ~/sdk-tools-linux*
-$ export PATH="$PATH:$TOOLS_PATH/tools/bin"
 ```
+
+You can then add it to your path for the current terminal window.
+
+```terminal
+$ export PATH="$PATH:$TOOLS_PATH/cmdline-tools/tools/bin"
+```
+
+
 
 Navigate to where you'd like to keep the SDK packages
 ($PLATFORM_PATH in these snippets) and download the SDK
